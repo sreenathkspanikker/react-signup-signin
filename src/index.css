@@ -1,3 +1,7 @@
+
+*{
+  box-sizing: border-box;
+}
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +9,135 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  background-color: #1b1b1b;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.app-signin{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.app-content{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 326px;
+  height: 295.67px;
+  padding: 2rem;
+  border-radius: 8px;
+  background-color: white;
+  border: 1px solid rgba(0,0,0, 0.2);
+}
+
+.app-content.success{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.app-content.success p{
+  color: white;
+}
+
+h3{
+  margin: 0;
+  margin-bottom: 1rem;
+}
+
+input {
+  font-size: 14px;
+  border-radius: 3px;
+  border: 1px solid lightgray;
+  margin: 5px;
+  margin-bottom: 0px;
+  padding: 5px 10px;
+  width: 250px;
+  height: 30px;
+}
+
+button {
+  width: 100%;
+  height: 30px;
+  border: none;
+  border-radius: 3px;
+  background-color: rgb(111, 170, 247);
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 12px;
+  cursor: pointer;
+  color: white;
+}
+
+button:hover {
+  background-color: rgb(128, 181, 250);
+}
+
+.error {
+  color: tomato;
+  margin-bottom: 10px;
+  height: 8px;
+  font-size: 13px;
+}
+
+.checkmark__circle {
+  stroke-dasharray: 166;
+  stroke-dashoffset: 166;
+  stroke-width: 2;
+  stroke-miterlimit: 10;
+  stroke: #7ac142;
+  fill: none;
+  animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards
+}
+
+.checkmark {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: block;
+  stroke-width: 2;
+  stroke: #fff;
+  stroke-miterlimit: 10;
+  margin: 10% auto;
+  box-shadow: inset 0px 0px 0px #7ac142;
+  animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both
+}
+
+.checkmark__check {
+  transform-origin: 50% 50%;
+  stroke-dasharray: 48;
+  stroke-dashoffset: 48;
+  animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards
+}
+
+@keyframes stroke {
+  100% {
+      stroke-dashoffset: 0
+  }
+}
+
+@keyframes scale {
+
+  0%,
+  100% {
+      transform: none
+  }
+
+  50% {
+      transform: scale3d(1.1, 1.1, 1)
+  }
+}
+
+@keyframes fill {
+  100% {
+      box-shadow: inset 0px 0px 0px 30px #7ac142
+  }
 }
